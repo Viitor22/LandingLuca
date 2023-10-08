@@ -1,0 +1,73 @@
+@use 'variaveis';
+
+.cartaz{
+    padding: 24px 48px;
+    display: grid;
+    grid-template-columns: calc(50% - 48px) calc(50% + 48px);
+
+    @media (max-width: 961px) {
+        grid-template-columns: 33% 67%;
+    }
+
+    @media (max-width: 480px) {
+        display: block;
+    }
+
+    &__text{
+        padding: 20px 0px;
+
+        h1{
+            font-weight: bold;
+        }
+    }
+
+    &__poster{
+        padding: 20px 0px;
+        img{
+            height: auto;
+            max-height: 90%;
+            width: calc(100% - 56px);
+
+            @media (max-width: 961px) {
+                width: 93%;
+            }
+        }
+    }
+
+    &__meta{
+        padding-top: 8px;
+        padding-bottom: 16px;
+        &__item{
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            .label{
+                font-size: 12px;
+                color: variaveis.$corTextoPrincipal;
+                font-weight: bold;
+                &__text{
+                    font-size: 14px;
+                    color: variaveis.$corTextoPrincipal;
+                }
+            }
+        }
+    }
+
+    .desc{
+        margin-bottom: 24px;
+        line-height: 24px;
+    }
+
+    .credits{
+        &__title{
+            font-weight: bold;
+            padding-bottom: 8px;
+        }
+
+        &__text{
+            padding-bottom: 24px;
+            line-height: 24px;
+        }
+    }
+}
+

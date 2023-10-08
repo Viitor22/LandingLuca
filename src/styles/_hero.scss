@@ -1,0 +1,82 @@
+@use 'variaveis';
+
+.hero {
+    position: relative;
+    padding: 24px 48px;
+    padding-bottom: 12px;
+    max-height: 95vh;
+    text-align: center;
+    background-image: url(../images/luca-hero-degrade.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @media (max-width: 767px){
+        height: 100vh;
+        max-height: none;
+        background-size: 100% 100%;
+    }
+
+    @media (max-width: 480px){
+        position: relative;
+        height: 80vh;
+        background-image: none;
+        padding: 0px;
+        background-color: variaveis.$corTexto_PrincipalSections;
+    }
+
+    &__content {
+        padding-top: 28.3%;
+        max-height: 700px;
+
+        
+        @media (max-width: 767px){
+            padding-top: 55%;
+            max-height: 400px;
+        }
+
+        @media (max-width: 480px){
+            padding: 0;
+            background-color: variaveis.$corTexto_PrincipalSections;
+        }
+
+        .mobile{
+            display: none;
+
+            img{
+                max-width: 100%;
+            }
+
+            @media (max-width: 480px){
+                display: block;
+                width: 100vw;
+            }
+        }
+
+        button{
+            font-weight: bold;
+            margin: 16px 12px 0px;
+            padding: 16px 32px;
+        }
+
+        p {
+            color: variaveis.$corTextoSecundario;
+        }
+
+        .title{
+            font-weight: bold;
+            margin-top: 24px;
+            padding-bottom: 20px;
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+    }
+
+    &__disclaimer{
+        margin-top: 28px;
+        padding: 0px 48px;
+    }
+
+    &__logo{
+        max-height: 100px;
+    }
+}
